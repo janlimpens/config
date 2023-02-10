@@ -1,6 +1,6 @@
-#Meine dotfiles
+# Meine dotfiles
 
-##Grundsätzliches Setup:
+## Grundsätzliches Setup:
 
 
 ```
@@ -11,7 +11,7 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $H
 
 ```
 
-##Wenn ich es clone (neues Setup)
+## Wenn ich es clone (neues Setup)
 
 
 ```
