@@ -1,0 +1,2 @@
+use DB::Pluggable;
+DB::Pluggable->run_with_config( \'[DataPrinter]' );  # note the '\'
