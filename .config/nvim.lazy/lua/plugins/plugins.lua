@@ -46,5 +46,9 @@ return {
       },
     },
     { "mfussenegger/nvim-dap" },
+    {
+      "rafamadriz/friendly-snippets",
+      enabled = false,
+    },
   },
 }

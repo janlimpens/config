@@ -62,4 +62,14 @@ function M.setup()
   })
 end
 
+local cmp = require("cmp")
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ["<C-e>"] = cmp.mapping.abort(),
+    ["<Tab>"] = cmp.mapping.select_next_item(),
+    ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+  }),
+})
+
 return M

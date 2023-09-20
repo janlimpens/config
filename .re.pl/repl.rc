@@ -1,1 +1,2 @@
-load_plugin('DataPrinter');
+use feature qw(say signatures);
+load_plugin($_) for qw(History LexEnv DataPrinter);

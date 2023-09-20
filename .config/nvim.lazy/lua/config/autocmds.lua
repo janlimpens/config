@@ -7,12 +7,11 @@ vim.cmd([[
     ":vnoremap <silent> im :!perlimports --read-stdin --filename '%:p'<CR>
     au FileType sql setl formatprg=/usr/local/bin/pg_format\ -
     "au BufWritePre * :StripTrailingWhitespace<CR>
-    noremap <Up> <Nop>
-    noremap <Down> <Nop>
-    noremap <Left> <Nop>
-    noremap <Right> <Nop>
     nmap <C-h> :bprevious<CR>
     nmap <C-l> :bnext<CR>
+
+    au Filetype perl nmap = :PerlTidy<CR>
+    au Filetype perl vmap = :PerlTidy<CR>
 ]])
 
 vim.api.nvim_create_autocmd({ "BufReadPost" }, {

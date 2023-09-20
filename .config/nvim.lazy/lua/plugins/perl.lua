@@ -3,12 +3,16 @@ return {
     "neovim/nvim-lspconfig",
     init = function()
       -- thats the one with dap
-      require("lspconfig").perlpls.setup({
-        perlcritic = { enabled = false },
+      -- require("lspconfig").perlpls.setup({
+      --   perlcritic = { enabled = false },
+      -- })
+      require("lspconfig").perlls.setup({
+        perltidy = { perltidyrc = "~/.perltidyrc" },
       })
-      require("lspconfig").perlls.setup({})
     end,
   },
+  { "ssoriche/perltidy.vim" },
+  { "williamboman/mason-lspconfig.nvim" }
   -- {
   --   "mfussenegger/nvim-dap",
   --   lazy = false,
