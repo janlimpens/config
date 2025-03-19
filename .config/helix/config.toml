@@ -1,0 +1,35 @@
+theme = "tokyonight"
+
+[editor]
+line-number = "absolute"
+mouse = true
+rulers = [80]
+auto-save = true
+bufferline = "multiple"
+text-width = 80
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+max-wrap = 25 # increase value to reduce forced mid-word wrapping
+
+[keys.normal]
+C-j = ["delete_selection", "move_line_down", "paste_before"]
+C-k = ["delete_selection", "move_line_up", "paste_before"]
+C-h = ["delete_selection", "move_char_left", "paste_before"]
+C-l = ["delete_selection", "move_char_right", "paste_before"]
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
