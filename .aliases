@@ -1,0 +1,5 @@
+#! /usr/bin/bash
+
+alias ls="ls --color"
+alias ll="ls -lah"
+alias helix="/usr/lib/helix/hx"
